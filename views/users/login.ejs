@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Loing</title>
+</head>
+<body style="background-color: #eee;">
+    <%-include('../layout.ejs')%>
+    <div class="wrapper">
+        <div class="form-login">
+            <h2 class="text-center text-default mt-4" style="font-weight: bold; font-family: 'PT Serif', serif;">LOGIN</h2>
+            <div class="text-center mt-4"><img src="/images/logo.png" alt="" srcset="" style="width: 30%;"></div>
+            <h4 class="text-center text-default mt-4" style="font-family: 'Kalam', cursive;">M-Shopping</h4>
+            <form action="/users/login" method="post" style="font-weight: 400">
+                <div class="form-group mt-4">
+                    <label for="username" ><i class="fas fa-user"></i> UserName : </label>
+                    <input type="text" name="username" class="form-control" placeholder="username">
+                </div>
+                <div class="form-group mt-4">
+                    <label for="password"><i class="fas fa-key"></i> Password : </label>
+                    <input type="password" name="password" class="form-control" placeholder="password">
+                </div>
+                <div class="text-center mt-5">
+                    <button class="btn btn-success "><i class="fas fa-sign-in-alt"></i>  LOGIN</button>
+                </div>
+            </form>
+            <hr>
+         
+            <div class="row ">
+                <button class="btn btn-primary ml-4"><i class="fab fa-facebook-square"></i> Facebook</button>
+           
+                <button class="btn btn-danger ml-4"><i class="fab fa-google"></i> Google</button>
+            </div>
+           </div>
+        </div>
+        
+    </div>
+    <%-include('../footer.ejs')%>
+
+</body>
+</html>

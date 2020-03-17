@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title><%=products.namepd%></title>
+</head>
+
+<body style="background-color: #eee;">
+    <%- include('../layout2.ejs')%>
+    <div class="wrapper2">
+        <div class="container">
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-md-5">
+                    <img src="/images/product/<%=products.image%>" alt="" srcset=""
+                        style="width: 400px; height: 350px;">
+                </div>
+                <div class="col-md-7">
+                    <div class="row-cols-1 mt-5 ml-3">
+                        <h1><%=products.namepd%></h1>
+                        <h2 style="font-weight: bold;" class="text-info"> $ <%=products.price%></h2>
+                        <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                        4.0 stars
+                        <hr>
+                        <form action="/product/cart/" method="post">
+                            <input type="text" value="<%=products._id%>" name="product_id" hidden>
+                            <button type="submit" class="btn btn-default"><i class="fas fa-cart-arrow-down"></i> Add to Cart</button>
+                        </form>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-5 detail">
+                    <p class="text-center"><%-products.details%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../footer.ejs')%>
+</body>
+
+</html>

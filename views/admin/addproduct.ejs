@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>ADD PRODUCT</title>
+</head>
+
+<body style="background-color: #eee;">
+    <%-include('../layout2.ejs')%>
+    <div class="wrapper1">
+        <div class="form-addproduct">
+            <h2 class="text-center mt-3 " style="font-weight: bold; color:#FF4500;"> <i class="fas fa-box-open"></i> ADD
+                PRODUCT</h2>
+            <%if(locals.errors){%>
+            <ul class="alert alert-danger">
+                <%Object.values(errors).forEach(function(err){%>
+                <li>
+                    <%= err.msg%>
+                </li>
+                <%})%>
+            </ul>
+            <%}%>
+            <form action="/admin/addproduct" method="post" style="font-weight: 400;" enctype="multipart/form-data">
+                <!-- <div class="row mt-5"> -->
+                    <div class="form-group mt-5">
+                        <label for="">NameProduct : </label>
+                        <input type="text" name="namepd" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">AddCategory : </label>
+                        <select name="category" id="" class="form-control">
+                            <option value="another">another</option>
+                            <option value="pants">Pants</option>
+                            <option value="Shirt">Shirt</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="socks">Socks</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price : </label>
+                        <input type="text" name="price" class="form-control" placeholder=" $ usd">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Image : </label>
+                        <input type="file" name="image" id="" class="form-control-sm" onchange="loadFile(event) ">
+                        <img id="output" style="width: 300px;" >
+                    </div>
+                    <label for="">or </label>
+                    <div class="form-group">
+                        <label for="">Image-URL : </label>
+                        <input type="text" name="imgurl" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Product details : </label>
+                        <textarea name="details" id="" cols="30" rows="10" class="form-control">
+                        </textarea>
+                    </div>
+                    <div class="text-right">
+                        <button style="background-color: #FF4500; color:#FFF;" type="submit" class="btn btn-sm"><i class="fas fa-plus"></i> ADD PRODUCT</button>
+                    </div>
+               </div>
+            </form>
+        </div>
+    </div>
+
+    <%-include('../footer.ejs')%>
+
+
+    
+            <script>
+                var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
+            <script type="text/javascript">
+            
+                CKEDITOR.replace('details');
+            </script>
+</body>
+
+</html>

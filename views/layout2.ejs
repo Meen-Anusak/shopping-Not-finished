@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+</head>
+
+<body>
+    <nav style="font-family: 'PT Serif', serif; font-weight: bold; background-color: #FFF;"
+        class="navbar navbar-expand-lg navbar-light light-color fixed-top scrolling-navbar">
+        <a class="navbar-brand" href="/admin">
+            <img src="/images/logo.png" height="30" width="30" alt="mdb logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/admin">M-Shopping <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a id="pd" class="nav-link" onmouseover=pd(); onmouseout=pd1(); href="/admin/products"><i
+                            class="fas fa-tshirt"></i> Products</a>
+                </li>
+                <li class="nav-item">
+                    <a id="addpd" class="nav-link" onmouseover=addpd(); onmouseout=addpd1(); href="/admin/addproduct"><i
+                            class="fas fa-box-open"></i> Add Products</a>
+                </li>
+                <li class="nav-item">
+                    <a id="manage" class="nav-link" onmouseover=manage(); onmouseout=manage1(); href="#"><i
+                            class="fas fa-cubes"></i> Manage</a>
+                </li>
+            </ul>
+            <nav class=" navbar-light light-color">
+                <form class="form-inline my-2 my-lg-0 ml-auto">
+                    <input class="form-control" type="search" placeholder="Search in M-Shopping" aria-label="Search"
+                        style="width: 300px;">
+                    <button class="btn-floating btn btn-info btn-sm" type="submit"><i
+                            class="fas fa-search"></i></button>
+                </form>
+            </nav>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user text-success"></i>(admin)</a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
+                        aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item " href="/admin">My account</a>
+                        <a class="dropdown-item text-danger" href="/users/logout">Log out</a>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+
+
+    <script src="/javascripts/jsss.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"></script>
+</body>
+
+</html>
